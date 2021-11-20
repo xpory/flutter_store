@@ -34,6 +34,7 @@ class TopVentas extends StatelessWidget {
           articulosComunes(
             image: 'assets/images/bananas.jpg',
             press: () {},
+            99
           ),
         ],
       ),
