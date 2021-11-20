@@ -15,26 +15,53 @@ class TopVentas extends StatelessWidget {
         children: [
           articulosComunes(
             image: 'assets/images/bananas.jpg',
-            press: () {
+            funcion: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => TopVentasScreen(),
+                    builder: (context) => const TopVentasScreen(),
                   ));
             },
           ),
           articulosComunes(
-            image: 'assets/images/fresas.jpg',
-            press: () {},
-          ),
-          articulosComunes(
-            image: 'assets/images/melocoton.jpeg',
-            press: () {},
+            image: 'assets/images/bananas.jpg',
+            funcion: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TopVentasScreen(),
+                  ));
+            },
           ),
           articulosComunes(
             image: 'assets/images/bananas.jpg',
-            press: () {},
-            99
+            funcion: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TopVentasScreen(),
+                  ));
+            },
+          ),
+          articulosComunes(
+            image: 'assets/images/bananas.jpg',
+            funcion: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TopVentasScreen(),
+                  ));
+            },
+          ),
+          articulosComunes(
+            image: 'assets/images/bananas.jpg',
+            funcion: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TopVentasScreen(),
+                  ));
+            },
           ),
         ],
       ),
@@ -42,22 +69,19 @@ class TopVentas extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class articulosComunes extends StatelessWidget {
-  const articulosComunes({
-    Key? key,
-    required this.image,
-    required this.press,
-  }) : super(key: key);
+  const articulosComunes({Key? key, required this.image, required this.funcion})
+      : super(key: key);
   final String image;
-  final void Function press;
-
+  final Function funcion;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return GestureDetector(
-      onTap: press,
+      onTap: () {},
       child: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
             left: kDefaultPadding,
             top: kDefaultPadding / 2,
             bottom: kDefaultPadding / 2),
